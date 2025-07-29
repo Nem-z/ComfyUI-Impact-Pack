@@ -156,9 +156,10 @@ class SAMLoader:
         else:
             modelname = folder_paths.get_full_path("sams", model_name)
 
-            if 'vit_h' in model_name:
+            model_name_lower = model_name.lower()
+            if 'vit_h' in model_name_lower:
                 model_kind = 'vit_h'
-            elif 'vit_l' in model_name:
+            elif 'vit_l' in model_name_lower:
                 model_kind = 'vit_l'
             else:
                 model_kind = 'vit_b'
